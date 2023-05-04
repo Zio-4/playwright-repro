@@ -1,0 +1,60 @@
+{
+  "name": "repro-roar",
+  "description": "reproduction roar app to test playwright",
+  "version": "1.0.0",
+  "author": "Philip Ziolkowski <philipz4848@gmail.com>",
+  "private": true,
+  "scripts": {
+    "build": "npx webpack --mode production",
+    "build:dev": "npm run build --silent -- --env dbmode=development",
+    "build:prod": "npm run build --silent -- --env dbmode=production",
+    "start": "npx webpack serve --open --mode development",
+    "start:dev": "npm run start --silent -- --env dbmode=development",
+    "start:prod": "npm run start --silent -- --env dbmode=production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yeatmanlab/repro-roar.git"
+  },
+  "license": "STANFORD ACADEMIC SOFTWARE LICENSE FOR ROAR™",
+  "keywords": [
+    "roar",
+    "literacy",
+    "dyslexia",
+    "reading",
+    "web-assessment"
+  ],
+  "bugs": {
+    "url": "https://github.com/yeatmanlab/repro-roar/issues"
+  },
+  "homepage": "https://github.com/yeatmanlab/repro-roar",
+  "dependencies": {
+    "@babel/core": "^7.21.8",
+    "@babel/preset-env": "^7.21.5",
+    "@bdelab/roar-firekit": "^1.3.3",
+    "@jspsych/plugin-fullscreen": "^1.1.2",
+    "@jspsych/plugin-html-keyboard-response": "^1.1.2",
+    "@jspsych/plugin-preload": "^1.1.2",
+    "@jspsych/plugin-survey-text": "^1.1.2",
+    "babel-loader": "^9.1.2",
+    "file-loader": "^6.2.0",
+    "jspsych": "^7.3.2",
+    "papaparse": "^5.4.1",
+    "regenerator-runtime": "^0.13.11",
+    "roarr": "^7.15.0",
+    "webpack": "^5.82.0",
+    "webpack-cli": "^5.0.2",
+    "webpack-dev-server": "^4.13.3"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.33.0",
+    "css-loader": "^6.7.3",
+    "eslint": "^8.39.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "folder-hash": "^4.0.4",
+    "html-webpack-plugin": "^5.5.1",
+    "style-loader": "^3.3.2",
+    "webpack-merge": "^5.8.0"
+  }
+}
